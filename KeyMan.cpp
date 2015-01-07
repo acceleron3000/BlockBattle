@@ -1,5 +1,5 @@
 #include <SFML\Graphics.hpp>
-#include "KeyMan.h"
+#include "KeyMan.hpp"
 
 void KeyMan::keyPressed(const sf::Keyboard::Key &code){
 	switch (code){

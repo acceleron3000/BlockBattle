@@ -1,7 +1,7 @@
 #include <SFML\Graphics.hpp>
-#include "KeyMan.h"
-#include "Game.h"
-#include "Constants.h"
+#include "KeyMan.hpp"
+#include "Game.hpp"
+#include "Constants.hpp"
 #include <chrono>
 #include <iostream>
 #include <string>

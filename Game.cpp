@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "Game.hpp"
 
 Game::Game(const KeyMan &keyman) :
 p1(true), p2(false), keys(keyman)

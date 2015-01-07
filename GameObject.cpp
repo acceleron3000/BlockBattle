@@ -1,5 +1,5 @@
-#include "GameObject.h"
-#include "Constants.h"
+#include "GameObject.hpp"
+#include "Constants.hpp"
 
 void GameObject::updateMovement()
 {

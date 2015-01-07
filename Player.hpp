@@ -1,8 +1,8 @@
 #pragma once
-#include "GameObject.h"
+#include "GameObject.hpp"
 #include <SFML\Graphics.hpp>
-#include "Constants.h"
-#include "Direction.h"
+#include "Constants.hpp"
+#include "Direction.hpp"
 
 class Player : public GameObject
 {

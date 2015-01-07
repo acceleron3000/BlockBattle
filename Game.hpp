@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
-#include "KeyMan.h"
-#include "Player.h"
+#include "KeyMan.hpp"
+#include "Player.hpp"
 
 class Game
 {
