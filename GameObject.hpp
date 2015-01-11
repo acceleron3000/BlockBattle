@@ -1,4 +1,5 @@
 #pragma once
+#include "Constants.hpp"
 #include <SFML\Graphics\Drawable.hpp>
 #include <SFML\Graphics\RenderWindow.hpp>
 
@@ -19,5 +20,8 @@ protected:
 	int height;
 	float speedX = 0;
 	float speedY = 0;
-	virtual sf::Drawable &getImg() = 0;
+	virtual sf::Drawable *getImg() = 0;
+#if SHOW_HIT_BOXES
+	virtual sf::Drawable &getHitbox() = 0;
+#endif
 };

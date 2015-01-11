@@ -1,6 +1,11 @@
 #pragma once
 
 /*
+* DEBUGGING
+*/
+#define SHOW_HIT_BOXES 0
+
+/*
 * GAME CONSTANTS
 */
 
@@ -16,16 +21,18 @@
  * PLAYER CONSTANTS
  */
 
+#define PLAYER_ANIMATION_DELAY 10;
+
 #define PLAYER_STUN_TIME 10
 #define PLAYER_BUMP_SPEED 4
 
-#define PLAYER_WIDTH 32
-#define PLAYER_HEIGHT 32
+#define PLAYER_WIDTH 24
+#define PLAYER_HEIGHT 24
 
 #define P1_COLOR 0, 51, 255
 #define P2_COLOR 255, 102, 0
 
-#define P1_FACE_D1 "../images/p1_fr1.gif"
+#define P1_FACE_D1 "../images/p1_fr1.png"
 #define P1_FACE_D2 "../images/p1_fr2.gif"
 #define P1_FACE_U1 "../images/p1_bk1.gif"
 #define P1_FACE_U2 "../images/p1_bk2.gif"

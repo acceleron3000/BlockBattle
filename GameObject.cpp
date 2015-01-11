@@ -30,7 +30,10 @@ void GameObject::wrap()
 
 void GameObject::draw(sf::RenderWindow &window)
 {
-	window.draw(getImg());
+	window.draw(*getImg());
+#if SHOW_HIT_BOXES
+	window.draw(getHitbox());
+#endif
 }
 
 /*

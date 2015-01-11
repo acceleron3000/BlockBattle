@@ -1,11 +1,11 @@
-﻿Build started 1/6/2015 10:37:09 PM.
+﻿Build started 1/10/2015 4:18:38 PM.
      1>Project "C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\BlockBattle\BlockBattle.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\source\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp GameObject.cpp KeyMan.cpp Player.cpp main.cpp
-         main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\source\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Player.cpp main.cpp
          Player.cpp
-         KeyMan.cpp
-         GameObject.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
          Game.cpp
          Generating Code...
        Link:
@@ -19,4 +19,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:18.92
+Time Elapsed 00:00:09.32
