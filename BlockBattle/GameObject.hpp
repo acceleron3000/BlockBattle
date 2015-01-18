@@ -11,6 +11,7 @@ public:
 	void updateMovement();
 	void draw(sf::RenderWindow &window);
 	bool isCollidingWith(GameObject &other);
+	void bump(GameObject &other);
 	void wrap();
 
 protected:

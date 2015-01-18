@@ -1,8 +1,15 @@
-﻿Build started 1/17/2015 4:25:59 PM.
+﻿Build started 1/18/2015 2:14:48 AM.
      1>Project "C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\BlockBattle\BlockBattle.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\source\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Player.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\source\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bullet.cpp Game.cpp Player.cpp main.cpp
+         Bullet.cpp
+     1>Bullet.cpp(11): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Bullet.cpp(16): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Bullet.cpp(21): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Bullet.cpp(26): warning C4305: '=' : truncation from 'double' to 'float'
+         Game.cpp
          Player.cpp
+         main.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Release\BlockBattle.exe" /NOLOGO /LIBPATH:C:\SFML\build\lib\Release "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-main.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Release\BlockBattle.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Release\BlockBattle.lib" /MACHINE:X86 /SAFESEH Release\Bullet.obj
          Release\Game.obj
@@ -17,4 +24,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.22
+Time Elapsed 00:00:07.51

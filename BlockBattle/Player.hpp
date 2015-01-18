@@ -16,7 +16,6 @@ public:
 	void moveDown();
 	void brakeX();
 	void brakeY();
-	void bump(Player &other);
 	bool isStunned() const { return stunTime > 0; }
 	void stunCoolDown() { --stunTime; }
 	void stun() { stunTime = PLAYER_STUN_TIME; }

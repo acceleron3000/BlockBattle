@@ -1,4 +1,5 @@
 #include "Game.hpp"
+#include <algorithm>
 
 
 Game::Game(const KeyMan &keyman) :
@@ -89,13 +90,49 @@ void Game::resolvePlayerCollisions()
 	if (p1.isCollidingWith(p2))
 	{
 		p1.bump(p2);
+		p2.bump(p1);
+		p1.stun();
+		p2.stun();
 		//p2.bump(p1);
 	}
 }
 
 void Game::resolveBulletCollisions()
 {
-	
+	for (auto i = bullets.begin(); i != bullets.end(); i++)
+	{
+		if ((**i).isCollidingWith(p1))
+		{
+			//BULLET HIT P1
+			//TODO decrement p1 health
+			p1.bump(**i);
+			p1.stun();
+			(**i).die();
+		}
+		else if ((**i).isCollidingWith(p2))
+		{
+			//BULLET HIT P2
+			//TODO decrement p1 health
+			p2.bump(**i);
+			p2.stun();
+			(**i).die();
+		}
+		else
+		{
+			//test against all other bullets
+			/*for (auto j = bullets.begin(); j != bullets.end(); j++)
+			{
+				if ((*i) != (*j) && (**i).isCollidingWith(**j))
+				{
+					(**i).die();
+					(**j).die();
+				}
+			}*/
+		}
+	}
+
+	//remove dead bullets
+	bullets.erase(std::remove_if(begin(bullets), end(bullets), [](std::shared_ptr<Bullet> b){return b->isDestroyed(); }), end(bullets));
 }
 
 void Game::updateWrapAround()

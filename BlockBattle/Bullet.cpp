@@ -1,8 +1,9 @@
 #include "Constants.hpp"
 #include "Bullet.h"
+//#include <iostream>
 
 Bullet::Bullet(Direction dir, bool isPlayer1, float pX, float pY) :
-isP1(isPlayer1)
+isP1(isPlayer1), isDead(false)
 {
 	switch (dir)
 	{
@@ -36,6 +37,11 @@ isP1(isPlayer1)
 		shape.setFillColor(sf::Color(P2_BULLET_COLOR));
 	shape.setSize(sf::Vector2f(BULLET_WIDTH, BULLET_HEIGHT));
 }
+
+/*Bullet::~Bullet()
+{
+	std::cout << "Goodbye cruel world.\n";
+}*/
 
 sf::Drawable *Bullet::getImg()
 {
