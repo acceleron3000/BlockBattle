@@ -1,5 +1,6 @@
 #include "Player.hpp"
 #include <iostream>
+#include "Bullet.h"
 
 void imageError()
 {
@@ -127,6 +128,20 @@ void Player::brakeX()
 void Player::brakeY()
 {
 	speedY = 0;
+}
+
+std::shared_ptr<Bullet> Player::toFire(bool key)
+{
+	if (key && !isFiring)
+	{
+		isFiring = true;
+		return std::make_shared<Bullet>(dir, isP1, x, y);
+	}
+	else if (!key)
+	{
+		isFiring = false;
+	}
+	return nullptr;
 }
 
 sf::Drawable *Player::getImg(){

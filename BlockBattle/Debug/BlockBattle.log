@@ -1,22 +1,28 @@
-﻿Build started 1/10/2015 4:18:38 PM.
+﻿Build started 1/17/2015 2:56:28 PM.
      1>Project "C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\BlockBattle\BlockBattle.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\source\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Player.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SFML\source\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bullet.cpp Game.cpp GameObject.cpp KeyMan.cpp main.cpp Player.cpp
          Player.cpp
-         Generating Code...
-         Compiling...
          main.cpp
+         KeyMan.cpp
+         GameObject.cpp
          Game.cpp
+         Bullet.cpp
+     1>c:\users\smith\documents\visual studio 2013\projects\blockbattle\blockbattle\bullet.cpp(8): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\smith\documents\visual studio 2013\projects\blockbattle\blockbattle\bullet.cpp(11): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\smith\documents\visual studio 2013\projects\blockbattle\blockbattle\bullet.cpp(14): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\smith\documents\visual studio 2013\projects\blockbattle\blockbattle\bullet.cpp(17): warning C4305: '=' : truncation from 'double' to 'float'
          Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\SFML\build\lib\Debug "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.lib" /MACHINE:X86 Debug\Game.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\SFML\build\lib\Debug "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.lib" /MACHINE:X86 Debug\Bullet.obj
+         Debug\Game.obj
          Debug\GameObject.obj
          Debug\KeyMan.obj
          Debug\main.obj
          Debug\Player.obj
-         BlockBattle.vcxproj -> C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.exe
-     1>Done Building Project "C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\BlockBattle\BlockBattle.vcxproj" (Build target(s)).
+     1>LINK : fatal error LNK1104: cannot open file 'C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\Debug\BlockBattle.exe'
+     1>Done Building Project "C:\Users\Smith\documents\visual studio 2013\Projects\BlockBattle\BlockBattle\BlockBattle.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:09.32
+Time Elapsed 00:00:09.63

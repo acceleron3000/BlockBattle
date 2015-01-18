@@ -15,6 +15,10 @@ void KeyMan::keyPressed(const sf::Keyboard::Key &code){
 	case sf::Keyboard::Down:
 		p1Down = true;
 		break;
+	case sf::Keyboard::Return:
+		p1Fire = true;
+		break;
+
 	case sf::Keyboard::W:
 		p2Up = true;
 		break;
@@ -26,6 +30,9 @@ void KeyMan::keyPressed(const sf::Keyboard::Key &code){
 		break;
 	case sf::Keyboard::S:
 		p2Down = true;
+		break;
+	case sf::Keyboard::Space:
+		p2Fire = true;
 		break;
 	}
 }
@@ -43,6 +50,10 @@ void KeyMan::keyReleased(const sf::Keyboard::Key &code){
 	case sf::Keyboard::Down:
 		p1Down = false;
 		break;
+	case sf::Keyboard::Return:
+		p1Fire = false;
+		break;
+
 	case sf::Keyboard::W:
 		p2Up = false;
 		break;
@@ -54,6 +65,9 @@ void KeyMan::keyReleased(const sf::Keyboard::Key &code){
 		break;
 	case sf::Keyboard::S:
 		p2Down = false;
+		break;
+	case sf::Keyboard::Space:
+		p2Fire = false;
 		break;
 	}
 }

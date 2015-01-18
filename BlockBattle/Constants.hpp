@@ -29,10 +29,7 @@
 #define PLAYER_WIDTH 24
 #define PLAYER_HEIGHT 24
 
-#define P1_COLOR 0, 51, 255
-#define P2_COLOR 255, 102, 0
-
-#define P1_FACE_D1 "../images/p1_fr1.png"
+#define P1_FACE_D1 "../images/p1_fr1.gif"
 #define P1_FACE_D2 "../images/p1_fr2.gif"
 #define P1_FACE_U1 "../images/p1_bk1.gif"
 #define P1_FACE_U2 "../images/p1_bk2.gif"
@@ -52,15 +49,22 @@
 
 //start players in different sides of screen
 #define START_PADDING 20
-#define P1_START_X ((WINDOW_WIDTH / 3) - (PLAYER_WIDTH / 2) - START_PADDING)
-#define P2_START_X ((2 * WINDOW_WIDTH / 3) - (PLAYER_WIDTH / 2) + START_PADDING)
+#define P2_START_X ((WINDOW_WIDTH / 3) - (PLAYER_WIDTH / 2) - START_PADDING)
+#define P1_START_X ((2 * WINDOW_WIDTH / 3) - (PLAYER_WIDTH / 2) + START_PADDING)
 
 //start players in vertical middle of screen
 #define P1_START_Y ((WINDOW_HEIGHT / 2) - (PLAYER_HEIGHT / 2))
 #define P2_START_Y P1_START_Y
 
-#define MOVE_SPEED 3.0;
+#define MOVE_SPEED 3.0
 
 /*
 * OTHER CONSTANTS
 */
+
+#define P1_BULLET_COLOR 0, 51, 255
+#define P2_BULLET_COLOR 255, 102, 0
+#define BULLET_SPEED	3.2
+#define BULLET_WIDTH	20
+#define BULLET_HEIGHT	20
+#define BULLET_SPAWN_DISTANCE	2

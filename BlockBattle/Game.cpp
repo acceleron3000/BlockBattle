@@ -1,7 +1,8 @@
 #include "Game.hpp"
 
+
 Game::Game(const KeyMan &keyman) :
-p1(true), p2(false), keys(keyman)
+p1(true), p2(false), keys(keyman), bullets()
 {
 
 }
@@ -17,6 +18,7 @@ void Game::onGameLoop()
 
 void Game::updateControls()
 {
+	std::shared_ptr<Bullet> bullet;
 	if (p1.isStunned())
 	{
 		//p1.brakeX();
@@ -37,6 +39,11 @@ void Game::updateControls()
 			p1.moveDown();
 		else
 			p1.brakeY();
+		
+		bullet = p1.toFire(keys.isKeyP1Fire());
+		if (bullet != nullptr){
+			bullets.push_front(bullet);
+		}
 	}
 
 	if (p2.isStunned())
@@ -59,6 +66,11 @@ void Game::updateControls()
 			p2.moveDown();
 		else
 			p2.brakeY();
+		
+		bullet = p2.toFire(keys.isKeyP2Fire());
+		if (bullet != nullptr){
+			bullets.push_front(bullet);
+		}
 	}
 }
 
@@ -66,6 +78,10 @@ void Game::updateMovement()
 {
 	p1.updateMovement();
 	p2.updateMovement();
+	for (auto i = bullets.begin(); i != bullets.end(); i++)
+	{
+		(**i).updateMovement();
+	}
 }
 
 void Game::resolvePlayerCollisions()
@@ -86,10 +102,18 @@ void Game::updateWrapAround()
 {
 	p1.wrap();
 	p2.wrap();
+	for (auto i = bullets.begin(); i != bullets.end(); i++)
+	{
+		(**i).wrap();
+	}
 }
 
 void Game::draw(sf::RenderWindow &window)
 {
 	p1.draw(window);
 	p2.draw(window);
+	for (auto i = bullets.begin(); i != bullets.end(); i++)
+	{
+		(**i).draw(window);
+	}
 }

@@ -11,20 +11,20 @@ void GameObject::wrap()
 {
 	if (x < -DEAD_ZONE)
 	{
-		x += WINDOW_WIDTH;
+		x += WINDOW_WIDTH + DEAD_ZONE;
 	}
 	else if (x + width > WINDOW_WIDTH + DEAD_ZONE)
 	{
-		x -= WINDOW_WIDTH;
+		x -= WINDOW_WIDTH + DEAD_ZONE;
 	}
 
 	if (y < -DEAD_ZONE)
 	{
-		y += WINDOW_HEIGHT;
+		y += WINDOW_HEIGHT + DEAD_ZONE;
 	}
 	else if (y + height > WINDOW_HEIGHT + DEAD_ZONE)
 	{
-		y -= WINDOW_HEIGHT;
+		y -= WINDOW_HEIGHT + DEAD_ZONE;
 	}
 }
 

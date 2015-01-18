@@ -2,6 +2,9 @@
 #include <SFML\Graphics.hpp>
 #include "KeyMan.hpp"
 #include "Player.hpp"
+#include "Bullet.h"
+#include <list>
+#include <memory>
 
 class Game
 {
@@ -21,4 +24,5 @@ private:
 	void resolveBulletCollisions();
 	void resolvePlayerCollisions();
 	void updateWrapAround();
+	std::list<std::shared_ptr<Bullet>> bullets;
 };

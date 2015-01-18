@@ -3,6 +3,8 @@
 #include <SFML\Graphics.hpp>
 #include "Constants.hpp"
 #include "Direction.hpp"
+#include "Bullet.h"
+#include <memory>
 
 class Player : public GameObject
 {
@@ -15,9 +17,10 @@ public:
 	void brakeX();
 	void brakeY();
 	void bump(Player &other);
-	bool isStunned(){ return stunTime > 0; }
+	bool isStunned() const { return stunTime > 0; }
 	void stunCoolDown() { --stunTime; }
 	void stun() { stunTime = PLAYER_STUN_TIME; }
+	std::shared_ptr<Bullet> toFire(bool key);
 
 protected:
 	sf::Drawable *getImg();
@@ -28,13 +31,11 @@ protected:
 private:
 	bool isP1;
 	int stunTime = 0;
-#if SHOW_HIT_BOXES
-	sf::RectangleShape hitboxShape;
-#endif
 	Direction dir = DOWN;
 	bool isAnimating = false;
 	int animStep = 0;
 	bool useFrameOne = true;
+	bool isFiring = false;
 	sf::Sprite faceDown1;
 	sf::Texture faceDown1t;
 	sf::Sprite faceDown2;
@@ -52,4 +53,7 @@ private:
 	sf::Sprite faceLeft2;
 	sf::Texture faceLeft2t;
 	sf::Sprite *currentFace;
+#if SHOW_HIT_BOXES
+	sf::RectangleShape hitboxShape;
+#endif
 };
